@@ -1,0 +1,18 @@
+Requirements:
+    CMake 2.6 or later
+    scons
+
+Build instructions for 64-bit system:
+
+    svn checkout -r 5610 http://v8.googlecode.com/svn/trunk lib
+    cd lib && scons mode=release arch=x64
+    cd ..
+    cmake . && make
+
+Build instructions for 32-bit system:
+
+    svn checkout -r 5610 http://v8.googlecode.com/svn/trunk lib
+    cd lib && scons mode=release
+    cd ..
+    cmake . && make
+
