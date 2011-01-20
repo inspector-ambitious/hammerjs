@@ -371,7 +371,7 @@ static Handle<Value> stream_next(const Arguments& args)
     std::string buffer;
     std::getline(*fs, buffer);
     if (fs->eof())
-        return ThrowException(String::New("Exception: Stream.readLine() reaches end of file"));
+        return ThrowException(String::New("Exception: Stream.next() reaches end of file"));
 
     return String::New(buffer.c_str());
 }
