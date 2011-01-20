@@ -108,7 +108,6 @@ int main(int argc, char* argv[])
     // 'Reflect' object
     Handle<FunctionTemplate> reflectObject = FunctionTemplate::New();
     reflectObject->Set(String::New("parse"), FunctionTemplate::New(reflect_parse)->GetFunction());
-    reflectObject->Set(String::New("exit"), FunctionTemplate::New(system_exit)->GetFunction());
     context->Global()->Set(String::New("Reflect"), reflectObject->GetFunction());
 
     // 'system' object
