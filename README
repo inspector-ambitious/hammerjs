@@ -1,6 +1,6 @@
 Requirements:
     CMake 2.6 or later
-    scons
+    scons 1.2 or later
 
 Build instructions for 64-bit system:
 
