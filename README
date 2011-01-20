@@ -75,6 +75,12 @@ There are few objects at the global scope: 'system', 'fs', and 'Reflect'.
 
 * workingDirectory() returns the current working directory.
 
+'Reflect' object has the following functions:
+
+* parse(code) returns JSON-formatted syntax tree corresponding to the code.
+  See https://wiki.mozilla.org/JavaScript:SpiderMonkey:Parser_API for the
+  details of the syntax tree structure.
+
 Examples
 ========
 
