@@ -24,8 +24,8 @@ There are few objects at the global scope: 'system', 'fs', and 'Reflect'.
 'system' object has the following functions:
 
 * print(obj, ...) displays obj as a string to the console output.
-  It is possible to print several objects at once, they will be
-  separated by one white space.
+  It is possible to print several objects separated by comma,
+  the output will be separated by white space.
   Example:
       system.print('Hello', 'world');
 
@@ -106,6 +106,23 @@ There are few objects at the global scope: 'system', 'fs', and 'Reflect'.
             }
         ]
     }
+
+Stream is created using fs.open(path). It has the following functions:
+
+* close() flushes pending buffer and closes the stream. Further operation
+  on a closed stream will throw an exception.
+
+* flush() ensures that pending data to be written is flushed to the file
+  system.
+
+* next() reads a line from the stream. If there is nothing more to read
+  (end of file), an exception is thrown.
+
+* readLine() reads a line from the stream, including the '\n' suffix.
+  If there is nothing more to read (end of file), an empty string is
+  returned instead.
+
+* writeLine() writes a string to the stream and then appends '\n'.
 
 Examples
 ========
