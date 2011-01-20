@@ -80,6 +80,32 @@ There are few objects at the global scope: 'system', 'fs', and 'Reflect'.
 * parse(code) returns JSON-formatted syntax tree corresponding to the code.
   See https://wiki.mozilla.org/JavaScript:SpiderMonkey:Parser_API for the
   details of the syntax tree structure.
+  Example:
+      Reflect.parse("var answer = 42;");
+
+  will give the following output:
+    {
+        "type": "Program",
+        "body": [
+            {
+                "type": "VariableDeclaration",
+                "declarations": [
+                    {
+                        "type": "AssignmentExpression",
+                        "operator": "=",
+                        "left": {
+                            "type": "Identifier",
+                            "name": "answer"
+                        },
+                        "right": {
+                            "type": "Literal",
+                            "value": "42"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
 
 Examples
 ========
